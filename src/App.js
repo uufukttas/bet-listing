@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Bulletin from './components/Bulletin';
+import Card from './components/Card';
+import { BetListProvider } from './context/BetList';
+import { SelectedBetProvider } from './context/SelectedBet';
 
-function App() {
+const Main = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BetListProvider>
+      <SelectedBetProvider>
+        <div className="bulletin-wrapper">
+          <Bulletin />
+          <Card />
+        </div>
+      </SelectedBetProvider>
+    </BetListProvider>
   );
 }
 
-export default App;
+export default Main;

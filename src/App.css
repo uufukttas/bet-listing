@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+
+table,
+td {
+    border: 1px solid #333;
+    font-size: 14px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+thead,
+tfoot {
+    color: #000;
+    background-color: #eee;
+    width: 100%;
+}
+
+td {
+  width: 350px;
+}
+
+td:first-child {
+  width: 1870px;
+}
+
+tr:nth-child(2n) > td {
+  padding: 15px 10px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.active {
+  background-color: yellow;
+}
+
+.card-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  background: #ccc;
+}
